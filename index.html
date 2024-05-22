@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Lilita+One&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>simpleCalc</title>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display">
+            <input type="text" readonly id="resultado">
+            <button class="btnclear clear" onclick="clearDisplay()">C</button>
+        </div>
+        <div class="buttons">
+            <div class="numbers">
+                <button class="btn num" onclick="agregarNum('7')">7</button>
+                <button class="btn num" onclick="agregarNum('8')">8</button>
+                <button class="btn num" onclick="agregarNum('9')">9</button>
+                <button class="btn num" onclick="agregarNum('4')">4</button>
+                <button class="btn num" onclick="agregarNum('5')">5</button>
+                <button class="btn num" onclick="agregarNum('6')">6</button>
+                <button class="btn num" onclick="agregarNum('1')">1</button>
+                <button class="btn num" onclick="agregarNum('2')">2</button>
+                <button class="btn num" onclick="agregarNum('3')">3</button>
+                <button class="btn num" onclick="agregarNum('0')">0</button>
+                <button class="btn num" onclick="agregarNum('.')">.</button>
+                <button class="btn intro" onclick="calcular()">=</button>
+            </div>
+            <div class="operators">
+                <button class="btn operator" onclick="elegirOp('/')">/</button>
+                <button class="btn operator" onclick="elegirOp('*')">*</button>
+                <button class="btn operator" onclick="elegirOp('-')">-</button>
+                <button class="btn operator" onclick="elegirOp('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <audio id="clickSound" src="./Sounds/select.mp3"></audio>
+    <audio id="clearSound" src="./Sounds/clear.mp3"></audio>
+    <audio id="introSound" src="./Sounds/intro.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
